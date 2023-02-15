@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
-
-
-
 
 /* New Button */
 
@@ -149,11 +147,5 @@
   .containerhai {
     min-width: 100%;
     padding: 1rem;
-  }
-
-  .form_control__items {
-    flex-direction: column;
-    justify-content: space-between;
-    
   }
 }

@@ -2,54 +2,57 @@
   box-sizing: border-box;
 }
 
-.checkbox {
-  opacity: 0;
-  position: absolute;
-  cursor: pointer;
-}
 
-.label {
-  width: 50px;
-  height: 26px;
-  background-color: #3f3f3f;
-  display: flex;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  position: relative;
-  transform: scale(1.5);
-  cursor: pointer;
-}
 
-.ball {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  position: absolute;
-  top: 2px;
-  left: 2px;
+
+/* New Button */
+
+.theme-container {
+  width: 2rem;
+  height: 2rem;
+  padding: 4px;
   border-radius: 50%;
-  transition: transform 0.2s linear;
-  cursor: pointer;
-}
-
-.checkbox:checked + .label .ball {
-  transform: translateX(24px);
-}
-
-.fa-moon {
-  color: pink;
-}
-
-.fa-sun {
-  color: rgb(244, 244, 75);
-}
-
-.toggleButton {
   position: absolute;
   right: 2rem;
   top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.theme-container:hover {
+  opacity: 0.8;
+}
+
+.shadowdark:hover{
+  box-shadow: 0 0 11px rgba(24, 24, 24, 0.411);
+
+}
+
+.shadowlight:hover{
+  box-shadow: 0 0 11px rgba(131, 131, 131, 0.471);
+
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.change {
+  animation-name: change;
+  animation-duration: 0.6s;
+  animation-direction: alternate;
 }
 
 .lottie {
@@ -61,7 +64,8 @@
   justify-content: center;
   align-items: center;
   padding: 3rem;
-  border-radius: 12px;
+  line-height: 2;
+  border-radius: 0.4rem;
   box-shadow: 0px 5px 4px -1px rgb(0 0 0 / 20%),
     0px 4px 4px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
@@ -75,6 +79,40 @@
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.btn-hover {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 42px;
+  color: #fff;
+  cursor: pointer;  
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 12px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+  box-shadow: 0 4px 15px 0 rgba(172, 85, 212, 0.75);
+}
+
+.btn-hover.color-7 {
+  background-image: linear-gradient(to right, #6253e1, #90429b, #871898, #eb7bff);
+  
 }
 
 @keyframes fadeInAnimation {
@@ -116,6 +154,6 @@
   .form_control__items {
     flex-direction: column;
     justify-content: space-between;
-    line-height: 2;
+    
   }
 }

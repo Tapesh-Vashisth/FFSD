@@ -11,7 +11,3 @@ const validateEnteredEmail = (emailAddress) => {
   return emailValidationRegex.test(emailAddress)
 }
 
-module.exports = {
-  validateEnteredEmail,
-  validateEnteredPassword,
-}

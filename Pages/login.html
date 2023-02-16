@@ -15,6 +15,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind.config.js"></script>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/Login.css" />
     <link rel="stylesheet" href="../styles/DarkLightButton.css" />
   </head>
   <body>
@@ -53,23 +55,28 @@
                 Login
               </h1>
 
+              <p class="login-error-message" id="emailError">
+                Invalid Email Address
+              </p>
               <div class="mb-6 lg:mb-9">
                 <input
                   type="text"
                   class="inputhai form-control block w-full px-4 py-2 text-xl font-normal text-gray-800 bg-white dark:bg-[#1b1b1bff] dark:text-white bg-clip-padding border border-solid border-blue-300 dark:border-purple-400 dark:focus:border-purple-600 rounded-xl transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  id="exampleFormControlInput1"
                   placeholder="Email address"
-                  name="emailAddress"
+                  id="emailAddress"
                 />
               </div>
 
+              <p class="login-error-message" id="passwordError">
+                Invalid Password
+              </p>
               <div class="mb-6 lg:mb-9">
                 <input
                   type="password"
                   class="inputhai form-control block w-full px-4 py-2 text-xl font-normal dark:bg-[#1b1b1bff] dark:text-white text-gray-800 bg-white bg-clip-padding border border-solid border-gray-300 rounded-xl transition ease-in-out m-0 focus:text-gray-700 dark:border-purple-400 dark:focus:border-purple-600 focus:bg-white focus:border-blue-600 focus:outline-none"
                   id="exampleFormControlInput2"
                   placeholder="Password"
-                  name="password"
+                  id="password"
                 />
               </div>
               <div class="text-center mb-6 px-2">
@@ -81,7 +88,7 @@
               </div>
 
               <div class="text-center">
-                <button type="button" class="btn-hover color-7">Login</button>
+                <button type="button" id="loginBtn" class="btn-hover color-7">Login</button>
                 <p class="text-sm font-semibold mt-2 pt-1 mb-0">
                   Don't have an account?
                   <a
@@ -97,6 +104,8 @@
       </div>
     </section>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="../javascript/helpers/LoginSignUpHelpers.js"></script>
+    <script src="../javascript/Login.js"></script>
     <script src="../javascript/DarkLighButton.js"></script>
   </body>
 </html>

@@ -8,6 +8,5 @@ const validateEnteredPassword = (password) => {
 }
 
 const validateEnteredEmail = (emailAddress) => {
-  return emailValidationRegex.test(emailAddress)
+  return emailAddress.match(emailValidationRegex) !== null
 }
-

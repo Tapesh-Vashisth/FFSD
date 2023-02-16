@@ -1,0 +1,1 @@
+var emailAddress = document.forms['form']['email']

@@ -6,8 +6,6 @@ const emailError = document.getElementById('emailError')
 const passwordError = document.getElementById('passwordError')
 
 const validateIncomingEmailAddress = (value) => {
-  console.log(value)
-  console.log(validateEnteredEmail(value))
   if (value.length === 0) {
     return false
   }

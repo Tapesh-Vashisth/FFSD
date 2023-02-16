@@ -32,7 +32,7 @@ const validateIncomingPassword = (value) => {
 const enableLoginButton = () => {
   if (
     !validateIncomingEmailAddress(emailAddress.value) ||
-    validateIncomingPassword(password.value)
+    !validateIncomingPassword(password.value)
   ) {
     loginButton.disabled = true
   } else {

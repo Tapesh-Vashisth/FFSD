@@ -1,1 +1,3 @@
-var emailAddress = document.forms['form']['email']
+var emailAddress = document.forms['loginForm']['emailAddress']
+var password = document.forms['loginForms']['password']
+

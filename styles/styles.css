@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -55,10 +55,19 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 4rem;
+  padding: 1rem 10%;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
 }
-
+/* .footer__front{
+  width: 100%;
+  display: flex;
+  max-width: 980px;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+} */
 .btn-hover {
   width: 100%;
   font-size: 1.2rem;

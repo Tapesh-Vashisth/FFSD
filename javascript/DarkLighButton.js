@@ -21,7 +21,7 @@ function setLight() {
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
-  }, 650);
+  }, 900);
   themeIcon.classList.add("change");
   container.classList.remove('shadowlight');
   container.classList.add('shadowdark');
@@ -31,7 +31,7 @@ function setDark() {
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
-  }, 300);
+  }, 900);
   themeIcon.classList.add("change");
   container.classList.remove('shadowdark');
   container.classList.add('shadowlight');

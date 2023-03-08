@@ -2,6 +2,7 @@ const emailAddress = document.getElementById('emailAddress')
 const password = document.getElementById('enteredPassword')
 const loginButton = document.getElementById('loginBtn')
 
+const userNonExistError = document.getElementById('userNonExistError')
 const emailError = document.getElementById('emailError')
 const passwordError = document.getElementById('passwordError')
 
@@ -50,4 +51,19 @@ password.addEventListener('change', (e) => {
   validateIncomingPassword(e.target.value)
 })
 
-enableLoginButton()
+emailAddress.addEventListener('input', enableLoginButton)
+password.addEventListener('input', enableLoginButton)
+
+loginButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  loginButton.disabled = true
+  const userDataIfExists = isUserExistsWithEmail(emailAddress.value)
+  if (userDataIfExists === null) {
+    userNonExistError.style.display = 'block'
+    loginButton.disabled = false
+  } else {
+    userNonExistError.style.display = 'none'
+    localStorage.setItem('emailAddress', userDataIfExists.emailAddress)
+    window.location.replace('./home.html')
+  }
+})

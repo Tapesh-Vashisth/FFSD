@@ -53,17 +53,3 @@ password.addEventListener('change', (e) => {
 
 emailAddress.addEventListener('input', enableLoginButton)
 password.addEventListener('input', enableLoginButton)
-
-loginButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  loginButton.disabled = true
-  const userDataIfExists = isUserExistsWithEmail(emailAddress.value)
-  if (userDataIfExists === null) {
-    userNonExistError.style.display = 'block'
-    loginButton.disabled = false
-  } else {
-    userNonExistError.style.display = 'none'
-    localStorage.setItem('emailAddress', userDataIfExists.emailAddress)
-    window.location.replace('./home.html')
-  }
-})

@@ -4,3 +4,10 @@
   display: none;
   margin-bottom: 4px;
 }
+
+.err-message {
+  color:rgb(255, 53, 53);
+  margin-left: 0.25rem;
+  text-align: center;
+  margin-bottom: 4px;
+}

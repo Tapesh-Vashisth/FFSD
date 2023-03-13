@@ -3,6 +3,7 @@ let passwordInput = document.getElementById('signup-password')
 let confirmPasswordInput = document.getElementById('signup-confirm-password')
 let submit = document.getElementById('signup-submit')
 let alerts = document.getElementsByClassName('error-message')
+let formSign = document.getElementById("formSign");
 
 let email = ''
 let password = ''
@@ -51,6 +52,4 @@ confirmPasswordInput.addEventListener('change', (e) => {
   }
 })
 
-submit.addEventListener('click', (e) => {
-  console.log(email, password, confirmPassword)
-})
+

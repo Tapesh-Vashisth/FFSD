@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="shortcut icon" href="./../Sources/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/./../Sources/favicon.ico" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -20,19 +20,19 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../tailwind.config.js"></script>
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/DarkLightButton.css" />
+    <script src="/../tailwind.config.js"></script>
+    <link rel="stylesheet" href="/../styles/styles.css" />
+    <link rel="stylesheet" href="/../styles/common.css" />
+    <link rel="stylesheet" href="/../styles/DarkLightButton.css" />
   </head>
 
   <body>
     <nav
       class="bg-[#cee3fd] dark:bg-[#1b1b1b] navbar transition-colors duration-1000"
     >
-      <a href="./login" class="flex items-center">
+      <a href="/" class="flex items-center">
         <img
-          src="./../Sources/logo.png"
+          src="/../Sources/logo.png"
           class="h-6 mr-3 sm:h-9"
           alt="Logo"
         />
@@ -65,7 +65,7 @@
           >
             <lottie-player
               class="w-100"
-              src="../Sources/login_animation.json"
+              src="/../Sources/login_animation.json"
               background="transparent"
               speed="1"
               autoplay
@@ -74,7 +74,7 @@
           <div
             class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-6/12 w-100 dark:bg-[#1f1f1f] dark:text-white transition-colors duration-1000 text-black bg-blue-200 text-sm containerhai"
           >
-            <form class="w-full" name="loginForm" action="/login" method="post">
+            <form class="w-full" name="loginForm" action="/auth/user/login" method="post">
               <h1 style="font-size: 2rem" class="mb-7 font-bold text-center">
                 Login
               </h1>
@@ -112,7 +112,7 @@
               </div>
               <div class="text-center mb-6 px-2">
                 <a
-                  href="/forgotPassword"
+                  href="/auth/user/forgotPassword"
                   class="text-gray-800 dark:text-white text-md font-semibold text-[1rem] font-underline"
                   >Forgot password?</a
                 >
@@ -130,7 +130,7 @@
                 <p class="text-sm font-semibold mt-4 pt-1 mb-0">
                   Don't have an account?
                   <a
-                    href="/signup"
+                    href="/auth/user/signup"
                     class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
                     >Register</a
                   >
@@ -146,10 +146,10 @@
     <a href="">Privacy Policy</a>
   </div> -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="../database/userDatabase.js"></script>
-    <script src="../javascript/helpers/UserHelpers.js"></script>
-    <script src="../javascript/helpers/LoginSignUpHelpers.js"></script>
-    <script src="../javascript/Login.js"></script>
-    <script src="../javascript/DarkLighButton.js"></script>
+    <script src="/../database/userDatabase.js"></script>
+    <script src="/../javascript/helpers/UserHelpers.js"></script>
+    <script src="/../javascript/helpers/LoginSignUpHelpers.js"></script>
+    <script src="/../javascript/Login.js"></script>
+    <script src="/../javascript/DarkLighButton.js"></script>
   </body>
 </html>

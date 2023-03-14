@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "/client/")));
 let users = [];
 
 app.get("/", (req, res) => {
-    res.render("./Pages/homepage2")
+    res.render("./Pages/homepage")
 });
 
 app.get("/signup", (req, res) => {

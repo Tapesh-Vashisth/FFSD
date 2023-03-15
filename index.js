@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
     res.render("./Pages/homepage")
 });
 
+app.all("*", (req, res) => {
+    res.render("./Pages/notFoundError");
+})
+
 
 app.listen(PORT, (err) => {
     if (err) {

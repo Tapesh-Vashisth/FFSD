@@ -19,6 +19,11 @@ app.get("/", (req, res) => {
     res.render("./Pages/homepage")
 });
 
+app.get("/home", (req, res) => {
+    res.render("./Pages/home")
+});
+
+
 app.all("*", (req, res) => {
     res.render("./Pages/notFoundError");
 })

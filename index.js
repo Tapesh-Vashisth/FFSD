@@ -6,6 +6,8 @@ const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
 const authRouter = require("./routes/auth/authRoutes");
 const PORT = process.env.PORT || 5000;
+const db = require("./database/db");
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/client"))

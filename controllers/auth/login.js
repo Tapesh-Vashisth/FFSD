@@ -1,28 +1,49 @@
-let users = require("../../database/user");
+let db = require("../../database/db");
+const bcrypt = require("bcrypt");
 
-function check2(email, password) {
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].email === email && users[i].password === password) {
-            return true;
-        }
-    }
 
-    return false;
+const loginPost = async (req, res) => {
+    db.get("SELECT * FROM user where email=$email", {
+        $email: req.body.email,
+    }, async (error, row) => {
+        if (!error && row) {
+            const match = await bcrypt.compare(req.body.password, row.password);
+            
+            if (match) {
+                    console.log(row);
+                    const token = Date.now().toString();
+                    db.run(`
+                        UPDATE user
+                        set token=$token
+                        where email=$email
+                    `, {
+                        $email: req.body.email,
+                        $token: token
+                    }, (err) => {
+                        if (err) {
+                            return console.error(err);
+                        }
+        
+                        console.log("updated successfully");
+                    })
+                    res.cookie("token", token, {httpOnly: true, secure: true, maxAge: 5*60*1000});
+                    res.redirect("/");
+                } else {
+                    if (error) {
+                        console.log(error);
+                    }
+        
+                    res.render("./Pages/login", {error: 1});
+                }
+            } else {
+                res.render("./Pages/login", {error: 1});
+            }
+    })
 }
-
-const loginPost = (req, res) => {
-    if (check2(req.body.email, req.body.password)) {
-        res.redirect("/");
-    } else {
-        res.render("./Pages/login", {error: 1});
-    }
-}
-
 
 const loginGet = (req, res) => {
     res.render("./Pages/login", {error: 0});
 }
-
 
 module.exports.get = loginGet;
 module.exports.post = loginPost;

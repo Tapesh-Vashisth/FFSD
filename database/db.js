@@ -1,4 +1,3 @@
-const { createAction } = require("@reduxjs/toolkit");
 const createUserTable = require("../models/user");
 const sqlite = require("sqlite3");
 

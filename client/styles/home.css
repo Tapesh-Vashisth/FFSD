@@ -130,19 +130,45 @@ a:hover .coursel_img {
   width: 50px;
   fill: currentcolor;
 }
-
-.title__front {
-  font-size: 4rem;
+.titlebox{
   position: absolute;
   top: 50%;
   left: 50%;
   padding: 0.5rem;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+.title_main {
+  font-size: 4rem;
   font-weight: 900;
   color: #750096;
+  display: inline;
+  padding: 2px;
   background-color: #c084fc;
   filter: drop-shadow(1px 2px 8px black);
   border-radius: 8px;
+}
+
+.title_sub{
+  font-size: 1.2rem;
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 2.4s steps(20, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 .cae {
@@ -175,4 +201,16 @@ a:hover .coursel_img {
   0%{transform: scale(1);}
   75%{transform: scale(1.2);}
   100%{transform: scale(1.1);}
+}
+
+
+@media screen and (max-width:500px) {
+  .title_main{
+    font-size: 2.4rem;
+
+  }
+
+  .title_sub{
+    font-size: 12px;
+  }
 }

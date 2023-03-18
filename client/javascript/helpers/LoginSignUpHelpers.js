@@ -10,3 +10,12 @@ const validateEnteredPassword = (password) => {
 const validateEnteredEmail = (emailAddress) => {
   return emailAddress.match(emailValidationRegex) !== null
 }
+
+const validateEnteredUsername= (username)=>{
+  console.log("h");
+  if(username.trim().length===0){
+    return false
+  }else{
+    return true
+  }
+}

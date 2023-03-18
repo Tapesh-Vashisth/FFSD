@@ -1,5 +1,3 @@
-let users = require("../../database/user");
-
 const forgotPasswordGet = (req, res) => {
     res.render("./Pages/forgotPassword");
 }

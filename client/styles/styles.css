@@ -60,6 +60,10 @@
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
   z-index: 5;
 }
+
+.navbar_opac{
+  opacity: 0.9;
+}
 /* .footer__front{
   width: 100%;
   display: flex;

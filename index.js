@@ -23,6 +23,10 @@ app.get("/", (req, res) => {
     res.render("./Pages/homepage")
 });
 
+app.get("/profile", (req, res) => {
+    res.render("./Pages/profile.ejs")
+})
+
 app.get("/home", (req, res) => {
     res.render("./Pages/home")
 });

@@ -4,16 +4,19 @@ let confirmPasswordInput = document.getElementById('signup-confirm-password')
 let submit = document.getElementById('signup-submit')
 let alerts = document.getElementsByClassName('error-message')
 let formSign = document.getElementById("formSign");
+let usernameInput= document.getElementById("signup-username")
 
 let email = ''
+let username= ''
 let password = ''
 let confirmPassword = ''
 
 submit.disabled = true
 
-function buttonToggler(email, password, confirmPassword) {
+function buttonToggler(email, username ,password, confirmPassword) {
   if (
     validateEnteredEmail(email) &&
+    validateEnteredUsername(username)&&
     validateEnteredPassword(password) &&
     validateEnteredPassword(confirmPassword) &&
     confirmPassword === password
@@ -28,28 +31,40 @@ emailInput.addEventListener('change', (e) => {
     alerts[0].style.display = 'block'
   } else {
     alerts[0].style.display = 'none'
-    buttonToggler(email, password, confirmPassword)
+    buttonToggler(email, username, password, confirmPassword)
+  }
+})
+
+usernameInput.addEventListener('change', (e) => {
+  username = e.target.value
+  if (!validateEnteredUsername(e.target.value)) {
+    alerts[1].style.display = 'block'
+  } else {
+    alerts[1].style.display = 'none'
+    buttonToggler(email, username, password, confirmPassword)
   }
 })
 
 passwordInput.addEventListener('change', (e) => {
   password = e.target.value
   if (!validateEnteredPassword(e.target.value)) {
-    alerts[1].style.display = 'block'
+    alerts[2].style.display = 'block'
   } else {
-    alerts[1].style.display = 'none'
-    buttonToggler(email, password, confirmPassword)
+    alerts[2].style.display = 'none'
+    buttonToggler(email, username, password, confirmPassword)
   }
 })
 
 confirmPasswordInput.addEventListener('change', (e) => {
   confirmPassword = e.target.value
   if (password !== confirmPassword) {
-    alerts[2].style.display = 'block'
+    alerts[3].style.display = 'block'
   } else {
-    alerts[2].style.display = 'none'
-    buttonToggler(email, password, confirmPassword)
+    alerts[3].style.display = 'none'
+    buttonToggler(email, username, password, confirmPassword)
   }
 })
+
+
 
 

@@ -18,7 +18,8 @@ function createUserTable(db) {
             dob TEXT,
             description TEXT,
             status INTEGER,
-            token TEXT
+            token TEXT,
+            joined TEXT
         )
     `)
 }

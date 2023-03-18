@@ -252,12 +252,12 @@ a:hover .coursel_img {
 
 .conclusion h2{
   font-size: 3rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   font-weight: 500;
 }
 
 .ruler__mine{
-  margin: 0 auto 1rem;
+  margin: 1rem auto 3rem;
   width: 40%;
   min-width: 100px;
   border-top: none;

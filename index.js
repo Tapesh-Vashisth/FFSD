@@ -6,6 +6,7 @@ const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
 const authRouter = require('./routes/auth/authRoutes')
 const dashboardRouter = require("./routes/dashboard/dashboardRoutes");
+const postRouter = require('./routes/post/postRoute')
 const PORT = process.env.PORT || 5000
 const db = require('./database/db')
 
@@ -19,24 +20,14 @@ app.use(express.static('client'))
 app.use('/auth', authRouter)
 app.use('/dashboard', dashboardRouter);
 
-app.get("/", (req, res) => {
-    res.render("./Pages/home")
-});
+app.get('/', (req, res) => {
+  res.render('./Pages/home');
+})
 
-app.get("/dashboard/profile", (req, res) => {
-    
-});
-
-app.get("/dashboard/chat", (req, res) => {
-    res.render("./Pages/dashboard", {main: "./chat.ejs"})
-});
-
-app.get("/dashboard/notification", (req, res) => {
-    res.render("./Pages/dashboard", {main: "./notification.ejs"})
-});
+app.use('/', postRouter);
 
 app.all('*', (req, res) => {
-  res.render('./Pages/notFoundError')
+  res.render('./Pages/notFoundError');
 })
 
 app.listen(PORT, (err) => {

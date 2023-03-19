@@ -6,6 +6,8 @@ const userNonExistError = document.getElementById('userNonExistError')
 const emailError = document.getElementById('emailError')
 const passwordError = document.getElementById('passwordError')
 
+loginButton.disabled = true
+
 const validateIncomingEmailAddress = (value) => {
   if (value.length === 0) {
     return false

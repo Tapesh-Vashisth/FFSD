@@ -1,5 +1,3 @@
-const db = require("../database/db");
-
 function createUserTable(db) {
     db.exec(`
         DROP TABLE if exists user;

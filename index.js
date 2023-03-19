@@ -5,6 +5,7 @@ const app = express()
 const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
 const authRouter = require('./routes/auth/authRoutes')
+const postRouter = require('./routes/post/postRoute')
 const PORT = process.env.PORT || 5000
 const db = require('./database/db')
 
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('client'))
 
 app.use('/auth', authRouter)
+app.use('/', postRouter)
 
 app.get('/', (req, res) => {
   res.render('./Pages/homepage')

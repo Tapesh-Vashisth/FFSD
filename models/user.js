@@ -9,6 +9,7 @@ function createUserTable(db) {
             name TEXT,
             email TEXT,
             password TEXT,
+            gender TEXT,
             followers INTEGER,
             following INTEGER,
             friends INTEGER,

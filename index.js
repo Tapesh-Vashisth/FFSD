@@ -5,6 +5,7 @@ const app = express()
 const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
 const authRouter = require('./routes/auth/authRoutes')
+const dashboardRouter = require("./routes/dashboard/dashboardRoutes");
 const PORT = process.env.PORT || 5000
 const db = require('./database/db')
 
@@ -16,17 +17,22 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('client'))
 
 app.use('/auth', authRouter)
+app.use('/dashboard', dashboardRouter);
 
 app.get("/", (req, res) => {
-    res.render("./Pages/homepage")
+    res.render("./Pages/home")
 });
 
-app.get("/profile", (req, res) => {
-    res.render("./Pages/profile.ejs")
-})
+app.get("/dashboard/profile", (req, res) => {
+    
+});
 
-app.get("/home", (req, res) => {
-    res.render("./Pages/home")
+app.get("/dashboard/chat", (req, res) => {
+    res.render("./Pages/dashboard", {main: "./chat.ejs"})
+});
+
+app.get("/dashboard/notification", (req, res) => {
+    res.render("./Pages/dashboard", {main: "./notification.ejs"})
 });
 
 app.all('*', (req, res) => {

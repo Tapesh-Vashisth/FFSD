@@ -1,11 +1,11 @@
-const db = require("../database/db");
+const db = require('../database/db')
 
 function createUserTable(db) {
-    db.exec(`
+  db.exec(`
         DROP TABLE if exists user;
     `)
 
-    db.exec(`
+  db.exec(`
         CREATE TABLE if not exists user (
             user_id TEXT,
             name TEXT,
@@ -24,4 +24,4 @@ function createUserTable(db) {
     `)
 }
 
-module.exports = createUserTable;
+module.exports = createUserTable

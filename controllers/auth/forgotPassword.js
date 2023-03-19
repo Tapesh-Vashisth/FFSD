@@ -1,3 +1,4 @@
+
 const forgotPasswordGet = (req, res) => {
     res.render("./Pages/forgotPassword");
 }

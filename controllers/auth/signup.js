@@ -15,15 +15,16 @@ const signupPost = async (req, res) => {
         const hashedpassword = await bcrypt.hash(req.body.pass1, 10)
         let date = new Date()
         db.run(
-          'INSERT INTO user(user_id, email, password, token, joined) values(?, ?, ?, ?, ?)',
+          'INSERT INTO user(user_id, name, email, password, token, joined) values(?, ?, ?, ?, ?, ?)',
           [
             date.toString(),
+            req.body.username,
             req.body.email,
             hashedpassword,
             token,
             date.toISOString(),
           ],
-          (err) => {
+          (err) => {    
             if (err) {
               console.log(err)
               res.render('./Pages/signUp', { error: 0 })

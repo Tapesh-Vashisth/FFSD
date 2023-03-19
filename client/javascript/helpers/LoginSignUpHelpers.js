@@ -12,7 +12,6 @@ const validateEnteredEmail = (emailAddress) => {
 }
 
 const validateEnteredUsername= (username)=>{
-  console.log("h");
   if(username.trim().length===0){
     return false
   }else{

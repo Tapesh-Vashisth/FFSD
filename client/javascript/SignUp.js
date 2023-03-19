@@ -24,10 +24,10 @@ function buttonToggler(email, username ,password, confirmPassword) {
     submit.disabled = false
   }
 }
-
-emailInput.addEventListener('change', (e) => {
-  email = e.target.value
-  if (!validateEnteredEmail(e.target.value)) {
+  
+usernameInput.addEventListener('change', (e) => {
+  username = e.target.value
+  if (!validateEnteredUsername(e.target.value)) {
     alerts[0].style.display = 'block'
   } else {
     alerts[0].style.display = 'none'
@@ -35,15 +35,16 @@ emailInput.addEventListener('change', (e) => {
   }
 })
 
-usernameInput.addEventListener('change', (e) => {
-  username = e.target.value
-  if (!validateEnteredUsername(e.target.value)) {
+emailInput.addEventListener('change', (e) => {
+  email = e.target.value
+  if (!validateEnteredEmail(e.target.value)) {
     alerts[1].style.display = 'block'
   } else {
     alerts[1].style.display = 'none'
     buttonToggler(email, username, password, confirmPassword)
   }
 })
+
 
 passwordInput.addEventListener('change', (e) => {
   password = e.target.value

@@ -17,13 +17,17 @@ app.use(express.static('client'))
 
 app.use('/auth', authRouter)
 
-app.get('/', (req, res) => {
-  res.render('./Pages/homepage')
+app.get("/", (req, res) => {
+    res.render("./Pages/homepage")
+});
+
+app.get("/profile", (req, res) => {
+    res.render("./Pages/profile.ejs")
 })
 
-app.get('/home', (req, res) => {
-  res.render('./Pages/home')
-})
+app.get("/home", (req, res) => {
+    res.render("./Pages/home")
+});
 
 app.all('*', (req, res) => {
   res.render('./Pages/notFoundError')

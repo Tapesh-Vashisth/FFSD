@@ -11,6 +11,11 @@
     />
     <title>Homepage</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -20,13 +25,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,800;1,800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,800;1,800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&display=swap"
+    rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/../tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="/../styles/common.css" />
     <link rel="stylesheet" href="/../styles/DarkLightButton.css" />
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/followListItem.css">
   </head>
 
   <body class="bg-[#fff] dark:bg-black transition-colors duration-1000">
@@ -58,14 +66,14 @@
                 ></path>
               </svg>
             </button>
-            <a href="./" class="flex ml-2 md:mr-24">
+            <a href="/post/posts" class="flex ml-2 md:mr-24">
               <img
                 src="/../Sources/logo.png"
                 class="h-8 mr-2"
                 alt="FlowBite Logo"
               />
               <span
-                class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
+                class="self-center text-lg font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
                 >BeYou</span
               >
             </a>
@@ -73,6 +81,22 @@
           <div class="flex items-center">
             <div class="flex items-center ml-3">
               <div>
+                <%- include("../Partials/addPost.ejs") %>
+              </div>
+              <div class="sm:pl-5 pl-3">
+                <a href="/dashboard/notification">
+                  <button
+                    class="shadowlight flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  >
+                    <svg class="w-5 h-5 sm:w-5 sm:h-5 flex justify-center items-center text-black-800 rounded-full dark:text-[#C1C1C1]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                  
+                    <!-- <i class="fa fa-bell w-10 h-10 flex justify-center items-center text-black-800 rounded-full dark:text-white" aria-hidden="true"></i> -->
+                  </button>
+                </a>
+              </div>
+              <div class="sm:pl-5 pl-3">
                 <button
                   type="button"
                   class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -87,8 +111,8 @@
                   />
                 </button>
               </div>
-              <div class="pl-4">
-                <div class="theme-container shadowlight">
+              <div class="sm:pl-5 pl-2">
+                <div class="theme-container shadowlight w-7 h-7">
                   <img
                     id="theme-icon"
                     src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
@@ -161,9 +185,20 @@
         class="h-full px-3 pb-4 overflow-y-auto bg-[#DFDFDE] pt-20 dark:bg-[#121212] transition-colors duration-1000"
       >
         <ul class="space-y-2">
+          <li class="mb-6">
+            <form>   
+              <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+              <div class="relative">
+                <input type="search" id="default-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+                <button type="submit" class="z-2 absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+              </div>
+            </form>
+          </li>
           <li>
             <a
-              href="#"
+              href="/post/posts"
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               <svg
@@ -179,33 +214,10 @@
               <span class="ml-3">Home</span>
             </a>
           </li>
-          <li>
-            <a
-              href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-            >
-              <svg
-                aria-hidden="true"
-                class="flex-shrink-0 w-6 h-6 text-gray-800 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                ></path>
-              </svg>
-              <span class="flex-1 ml-3 whitespace-nowrap">Post</span>
-              <!-- <span
-                class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"
-                >Pro</span
-              > -->
-            </a>
-          </li>
 
           <li>
             <a
-              href="#"
+              href="/dashboard/chat"
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               <svg
@@ -231,7 +243,7 @@
           </li>
           <li>
             <a
-              href="#"
+              href="/dashboard/profile"
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               <svg
@@ -254,16 +266,28 @@
       </div>
     </aside>
     <!--sm:ml-64 margin-left > 16rem important -->
-    <div class=" ml-4 sm:ml-72 mt-20 dark:text-white">
-      <h1 >Kya baat ay</h1>
-      <h2 >Ayyy</h2>
+    <div class="sm:ml-[256px] mt-[75px] main-container sm:mt-[66px] dark:text-white flex flex-col">
+      <%- include(main) %>
     </div>
 
+    <script src="/../javascript/helpers/emojiPicker.js"></script>
+    <script>
 
-    <script src="/../javascript/homepage.js"></script>
+        new EmojiPicker({
+            trigger: [
+                {
+                    selector: '.second-btn',
+                    insertInto: '.two'
+                }
+            ],
+            closeButton: true,
+            //specialButtons: green
+        });
+
+    </script>
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-    <script src="/../javascript/DarkLighButton.js"></script>
     <script src="/../javascript/DarkLighButton.js"></script>
   </body>
 </html>

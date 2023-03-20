@@ -1,11 +1,16 @@
 <!-- Modal toggle -->
-<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  Toggle modal
+<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block sm:block hidden text-white bg-violet-800 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:bg-violet-800 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  POST
 </button>
 
+<svg class="w-5 h-5 sm:hidden dark:text-[#C1C1C1]" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+</svg>
+
+
 <!-- Main modal -->
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-    <div class="relative w-full h-full max-w-md md:h-auto">
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto inset-0 h-full">
+    <div class="relative w-full max-w-md h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
@@ -25,7 +30,7 @@
                   <label>Description</label>
                   <textarea
                     type="text"
-                    class="two max-h-[180px] inputhai form-control block w-full px-4 py-2 text-base font-normal text-gray-800 bg-white dark:bg-[#1b1b1bff] transition-colors duration-1000 dark:text-white bg-clip-padding border border-solid dark:focus:border-purple-600 rounded-xl transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-600 focus:outline-none"
+                    class="two max-h-[180px] min-h-[100px] inputhai form-control block w-full px-4 py-2 text-base font-normal text-gray-800 bg-white dark:bg-[#1b1b1bff] transition-colors duration-1000 dark:text-white bg-clip-padding border border-solid dark:focus:border-purple-600 rounded-xl transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-600 focus:outline-none"
                   ></textarea>
                   <div class="flex flex-row justify-end gap-2">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

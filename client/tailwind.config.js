@@ -4,5 +4,5 @@ tailwind.config = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: []
 };

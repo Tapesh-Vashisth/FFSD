@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.render('./Pages/home');
 })
 
-app.use('/posts', postRouter);
+app.use('/post', postRouter);
 
 app.all('*', (req, res) => {
   res.render('./Pages/notFoundError');

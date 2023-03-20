@@ -1,5 +1,5 @@
-const postGet = (req, res) => {
-  res.render('./Pages/dashboard', {main: "./addPost.ejs"});
+const addPostGet = (req, res) => {
+  res.render('./Pages/dashboard', {main: "../Partials/addPost.ejs"});
 }
 
-module.exports.get = postGet
+module.exports.get = addPostGet

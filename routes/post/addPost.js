@@ -1,9 +1,9 @@
 const express = require("express");
-const post = require("../../controllers/post/addPost.js");
+const addPost = require("../../controllers/post/addPost.js");
 const router = express.Router();
 
-router.get("/", post.get);
+router.get("/", addPost.get);
 
-router.post("/", post.post);
+// router.post("/", addPost.post);
 
 module.exports = router;

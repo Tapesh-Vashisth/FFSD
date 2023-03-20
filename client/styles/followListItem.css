@@ -33,6 +33,7 @@
 .follow__card .follow__content {
     display: flex;
     align-items: center;
+    border-radius: 100px 0px 0px 100px;
 }
 
 .follow__card .follow__details {

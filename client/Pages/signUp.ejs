@@ -20,27 +20,8 @@
     <link rel="stylesheet" href="/../styles/DarkLightButton.css" />
   </head>
   <body>
-    <nav class="bg-[#DFDFDE] dark:bg-[#1b1b1b] navbar  transition-colors duration-1000 ">
-      <a href="/" class="flex items-center">
-        <img
-          src="/../Sources/logo.png"
-          class="h-6 mr-3 sm:h-9"
-          alt="Logo"
-        />
-        <span
-          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-          >BeYou</span
-        >
-      </a>
-      <div>
-        <div class="theme-container shadowlight">
-          <img
-            id="theme-icon"
-            src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
-            alt="ERR"
-          />
-        </div>
-  </nav>
+    <%- include ('../Components/navbar.ejs') %>
+   
     <section class="h-screen bg-[#f7f7f7] screenHolder  dark:bg-[#121212]  transition-colors duration-1000 ">
       <div
         class="px-6 md:h-full bg-[#f7f7f7] text-gray-800 dark:bg-[#121212]  transition-colors duration-1000  dark:text-white"
@@ -54,7 +35,7 @@
           <lottie-player  class="w-100 " src="https://assets7.lottiefiles.com/packages/lf20_kdCeeh2u4M.json"  background="transparent"  speed="1" autoplay></lottie-player>
           </div>
           <div
-            class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-6/12 dark:bg-[#1f1f1f] w-100 bg-[#ebebeb] text-sm containerhai text-black dark:text-white  transition-colors duration-1000 "
+            class="xl:ml-20 mt-10 xl:w-5/12 lg:w-5/12 md:w-6/12 dark:bg-[#1f1f1f] w-100 bg-[#ebebeb] text-sm containerhai text-black dark:text-white  transition-colors duration-1000 "
           >
             <form class="w-full" id="formSign" action="/auth/signup" method="post">
               

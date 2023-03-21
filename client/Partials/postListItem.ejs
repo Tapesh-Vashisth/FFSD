@@ -1,20 +1,20 @@
-<div class=" flex flex-col border-2 rounded-lg border-violet-500 gap-3 p-3  bg-[#ebebeb] dark:bg-[#1f1f1f] text-black dark:text-gray-200">
+<div class="flex flex-col border-2 rounded-lg border-violet-500 gap-3 p-3 bg-[#ebebeb] transition-colors duration-1000 dark:bg-[#1f1f1f] text-black dark:text-gray-200">
     <div class="flex flex-row items-center gap-2">
         <div class="w-14 h-14">
-            <img class="w-full max-h-full rounded-full" src="https://images.unsplash.com/photo-1631947430066-48c30d57b943?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+            <img class="w-full max-h-full rounded-full" src=<%= profileImage %> alt="">
         </div>
         <div>
-            <p>Anda Prasad</p>
-            <p class="text-[12px]">11th November, 2023</p>
+            <p><%= name %></p>
+            <p class="text-[12px]"><%= date %></p>
         </div>
     </div>
 
     <div class="flex flex-col px-4 md:px-8 gap-2">
         <div>
-            <h1 class="text-md sm:text-xl">Night out</h1>
+            <h1 class="text-md sm:text-xl"><%= title %></h1>
         </div>
-        <div class="w-full">
-            <img class="w-full max-h-[450px]" src="https://images.unsplash.com/photo-1518811554972-31f9ca219d5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        <div class="w-full shadow-zinc-700 shadow-md">
+            <img class="w-full max-h-[450px] rounded-sm" src=<%= mainImage %> alt="">
         </div>
     </div>
 

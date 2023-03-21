@@ -1,0 +1,50 @@
+<div class="main bg-zinc-900">
+    <div class="cont-edit-profile">
+        <div class="main-edit-profile bg-black p-8 md:max-w-[75%] dark:shadow-sm dark:shadow-violet-700 flex flex-col justify-center gap-8">
+            <div class="profimg inpp">
+                <img src="/Sources/dpic.jpg"></image>
+                <button>Edit Pic</button>
+            </div>
+            <div class="user name inpp">
+                <p>User Name</p>
+                <input type="text" class="inp" name="name" placeholder="Anda Prasad">
+            </div>
+            <div class="Bio inpp">
+                <p>Bio</p>
+                <textarea class="min-h-[30px] max-h-[140px] h-[60px] max-w-[100%] w-[100%] bg-transparent border-b-2 outline-none" name="bio" id="" class="inp" cols="30" rows="10" placeholder="Cringe"></textarea>
+            </div>
+            <div class="Dob inpp">
+                <p>Date Of Birth</p>
+                <input type="date" name="dob" class="inp" placeholder="Date of birth">
+            </div>
+            <div class="gender inpp">
+                <p>Gender?</p>
+                <div class="flex flex-row w-[100%] justify-between">
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">
+                            Male
+                        </label>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">
+                            Female
+                        </label>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="action inpp flex flex-row justify-center gap-2">
+                <button>Cancel</button>
+                <button>Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

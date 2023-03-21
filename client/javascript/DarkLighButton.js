@@ -18,6 +18,7 @@ function setTheme() {
   }
 }
 function setLight() {
+  document.getElementsByTagName("body")[0].classList.add("light-invert")
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
@@ -28,6 +29,7 @@ function setLight() {
   themeIcon.src = sun;
 }
 function setDark() {
+  document.getElementsByTagName("body")[0].classList.remove("light-invert")
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");

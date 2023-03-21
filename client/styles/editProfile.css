@@ -1,3 +1,11 @@
+:root {
+    --invert-var: 1;
+}
+
+.light-invert {
+    --invert-var: 0;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -46,6 +54,7 @@
     background: none;
     /* color: #04304d; */
     text-align: center;
+
     outline: none;
     padding:4px;
     border:none;
@@ -67,7 +76,6 @@
 }
 
 .inp:focus{
-    color: 	#04304d;
     border:none;
     border-bottom: 2px solid #005b96;
     border-bottom-right-radius: 13px;
@@ -98,15 +106,6 @@
 .profimg input[type="file"]{
     display :none;
 }
-/* .cont-edit-profile label{
-    box-sizing: border-box;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color:#005b96;
-    color:white;
-    padding:2px 15px;
-    transition: all 0.3s;
-} */
 
 
 .Dob .inp::placeholder {
@@ -114,7 +113,7 @@
 }
 
 ::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+    filter: invert(var(--invert-var));
 }
 
 @media screen and (max-width: 640px) {

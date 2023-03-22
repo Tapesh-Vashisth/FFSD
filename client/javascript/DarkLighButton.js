@@ -5,6 +5,22 @@ var theme = "dark";
 const container = document.getElementsByClassName("theme-container")[0];
 const themeIcon = document.getElementById("theme-icon");
 container.addEventListener("click", setTheme);
+
+let decider = localStorage.getItem("mode");
+
+if (decider) {
+  if (decider == "dark") {
+    theme = "dark";
+    setDark()
+  } else {
+    theme = "light"
+    setLight();
+  }
+} else {
+  theme = "dark"
+  setDark();
+}
+
 function setTheme() {
   switch (theme) {
     case "dark":
@@ -17,9 +33,12 @@ function setTheme() {
       break;
   }
 }
+
 function setLight() {
+  localStorage.setItem("mode", "light");
   document.getElementsByTagName("body")[0].classList.add("light-invert")
-  document.documentElement.classList.toggle("dark");
+  document.getElementsByTagName("body")[0].classList.add("change-mode")
+  document.documentElement.classList.remove("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
   }, 900);
@@ -29,8 +48,10 @@ function setLight() {
   themeIcon.src = sun;
 }
 function setDark() {
+  localStorage.setItem("mode", "dark");
   document.getElementsByTagName("body")[0].classList.remove("light-invert")
-  document.documentElement.classList.toggle("dark");
+  document.getElementsByTagName("body")[0].classList.remove("change-mode")
+  document.documentElement.classList.add("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
   }, 900);

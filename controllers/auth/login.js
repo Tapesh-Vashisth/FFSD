@@ -37,7 +37,7 @@ const loginPost = async (req, res) => {
             secure: true,
             maxAge: 5 * 60 * 1000,
           })
-          res.redirect('/')
+          res.redirect('/post/posts')
         } else {
           if (error) {
             console.log(error)

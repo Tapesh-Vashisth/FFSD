@@ -2,26 +2,32 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .feed {
   max-height: calc(100vh - 66px);
 }
 
-.feed::-webkit-scrollbar
+.feed::-webkit-scrollbar,
+.chatlist::-webkit-scrollbar 
 {
 	width: 10px;
 	background-color: #000;
   border-radius: 5px;
 }
 
-.feed::-webkit-scrollbar-track
+.feed::-webkit-scrollbar-track,
+.chatlist::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0px 0px 6px rgba(0,0,0,.3);
 	background-color: #706a6a;
 }
 
-.feed::-webkit-scrollbar-thumb
+.feed::-webkit-scrollbar-thumb,
+.chatlist::-webkit-scrollbar-thumb
 {
 	background-color: #444;
   border-radius: 5px;

@@ -19,6 +19,7 @@ function setTheme() {
 }
 function setLight() {
   document.getElementsByTagName("body")[0].classList.add("light-invert")
+  document.getElementsByTagName("body")[0].classList.add("change-mode")
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");
@@ -30,6 +31,7 @@ function setLight() {
 }
 function setDark() {
   document.getElementsByTagName("body")[0].classList.remove("light-invert")
+  document.getElementsByTagName("body")[0].classList.remove("change-mode")
   document.documentElement.classList.toggle("dark");
   setTimeout(() => {
     themeIcon.classList.remove("change");

@@ -175,6 +175,18 @@
     object-fit: cover;
 }
 
+.container_story{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_story_image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 400px) {
   .containerhai {
     min-width: 100%;

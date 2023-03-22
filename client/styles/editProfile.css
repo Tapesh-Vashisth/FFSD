@@ -47,18 +47,18 @@
     border-radius: 50%;
     /* border:3px solid black; */
     padding: 1px;
+    object-fit: cover;
     margin-bottom: 8px;
 }
 .inp{
     box-sizing: border-box;
     background: none;
-    /* color: #04304d; */
     text-align: center;
 
     outline: none;
     padding:4px;
     border:none;
-    border-bottom: 1px solid #005b96;
+    border-bottom: 1px solid #820096;
 }
 
 .inpp{
@@ -77,29 +77,14 @@
 
 .inp:focus{
     border:none;
-    border-bottom: 2px solid #005b96;
+    border-bottom: 2px solid #730096;
     border-bottom-right-radius: 13px;
     transition: 0.1 ease;
 }
 
 
 
-.inpp button{
-    border: none;
-    border-radius: 15px;
-    background-color:	#005b96;
-    color:white;
-    height: 30px;
-    width: 100px;
-    margin: 0px;
-    transition: all 0.3 s;
-    outline: none;
-}
-.inpp button:hover{
-    transform: scale(1.01);
-    box-shadow: 1px 1px 1px 1px rgb(178 143 227);
 
-}
 .gender{
     min-width: 230px;
 }

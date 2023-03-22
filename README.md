@@ -7,7 +7,7 @@ The contributions by the team members of Team 10 are as follows:
 1) Tapesh Vashisth - Main Feed Page Design, Register Page, Notification
 2) Rahul Agarwal - Edit Profile, Main Feed Page Design, Profile Page
 3) Pranav Gupta - Login Design and JS, Add Post, Forgot Password Design and JS
-4) Shashank Raj - Home Page Design, Login and Register Design, 404 Page, Profile Page
+4) Shashank Raj - Home Page Design, Login and Register JS, 404 Page, Profile Page
 5) Aditi Venkatesh - Responsive Chat interface, Database architecture
 
 Commands to run the application

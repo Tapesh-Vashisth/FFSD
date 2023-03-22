@@ -34,7 +34,7 @@ const signupPost = async (req, res) => {
                 secure: true,
                 maxAge: 5 * 60 * 1000,
               })
-              res.redirect('/')
+              res.redirect('/auth/login')
             }
           },
         )

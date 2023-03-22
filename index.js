@@ -19,12 +19,15 @@ app.use(express.static('client'))
 
 app.use('/auth', authRouter)
 app.use('/dashboard', dashboardRouter);
+app.use('/post', postRouter);
 
 app.get('/', (req, res) => {
   res.render('./Pages/home');
 })
 
-app.use('/post', postRouter);
+app.get("/admin", (req, res) => {
+  res.render("./Pages/admin.ejs")
+})
 
 app.all('*', (req, res) => {
   res.render('./Pages/notFoundError');

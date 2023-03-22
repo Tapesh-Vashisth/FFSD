@@ -1,5 +1,5 @@
 const editProfileGet = (req, res) => {
-    res.render("./Pages/dashboard", {main: "./editProfile.ejs"})
+    res.render("./Pages/dashboard", {main: "./editProfile.ejs", title: "Edit Profile"})
 }
 
 const editProfilePost = (req, res) => {

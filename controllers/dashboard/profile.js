@@ -1,5 +1,5 @@
 const forgotPasswordGet = (req, res) => {
-    res.render("./Pages/dashboard", {main: "./profile.ejs"})
+    res.render("./Pages/dashboard", {main: "./profile.ejs", title: "Profile"})
 }
 
 const forgotPasswordPost = (req, res) => {
